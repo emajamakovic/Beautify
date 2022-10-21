@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Home from "./Home";
+import Products from "./Products";
+import SingleContact from "./components/SingleContact";
+import ContactbyCategory from "./components/ContactbyCategory";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Link,
+    BrowserRouter
+  } from "react-router-dom";
+import GoToTop from "./components/GoToTop";
+
+export default function App() {
+    
+
+    return(
+        <>
+    <Header/>
+    <Routes>
+          <Route path="/about" />
+          <Route path="/products" element={<Products/>} />
+          <Route path="/:category" element={<ContactbyCategory/>} />
+          <Route path="/products/:id" element={<SingleContact/>} />
+          <Route path="/" element={<Home/>} />
+          </Routes>
+          <GoToTop/>
+
+   <Footer/>
+    </>
+    )
 }
-
-export default App;
