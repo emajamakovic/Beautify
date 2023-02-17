@@ -1,28 +1,36 @@
-import React from "react";
-import {  FaHeart } from "react-icons/fa";
-import {Link} from 'react-router-dom'
+import React, { useEffect } from "react";
 import {useParams} from 'react-router-dom'
-import ContactsInfo from "./ContactsInfo";
 import Contact from "./Contact";
 import GoToTop from "./GoToTop";
+import { db } from "../firebase-config";
+import {collection, getDocs} from "@firebase/firestore"
 
 
 export default function ContactbyCategory() {
-
+    const [products, setProductsValue]= React.useState([]);
+    const ProductCollectionRef=collection(db, "products");
     const { category } = useParams();
 
-    const contacts=ContactsInfo.filter(contact => String(contact.category) === category).map(contact => {
+    useEffect(() => {
+        const getProducts = async()=> {
+        const data=await getDocs(ProductCollectionRef);
+        setProductsValue(data.docs.map((doc) => ({...doc.data(), id: doc.id}))) };
+        getProducts();
+    }, []);
+
+
+    const productscomponent=products.filter(product => String(product.category) === category).map(product => {
         return(
             <Contact
-            key={contact.id}
-            {...contact}
+            key={product.id}
+            {...product}
             />
         )
     })
 
     return (
         <div className="contacts">
-            {contacts}
+            {productscomponent}
             <GoToTop/>
         </div>
     )

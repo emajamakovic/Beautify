@@ -1,5 +1,6 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function Bestseller() {
     return (
@@ -23,8 +24,11 @@ export default function Bestseller() {
                         <p><FaArrowRight className="bestseller_table_icons"/>Extra Volume</p>
                         <p><FaArrowRight className="bestseller_table_icons"/>Extra Volume</p>
                     </div>
-                </div> 
-                <button className="bestseller_button">SHOP NOW</button>
+                </div>  
+                <Link to="/products/1" className="link">
+                    <div className="bestseller_button">SHOP NOW</div>        
+                </Link>
+             
             </div>
 
         </div>

@@ -1,21 +1,35 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Contact from "./components/Contact";
-import ContactsInfo from "./components/ContactsInfo";
+import { db } from "./firebase-config";
+import { collection, getDocs} from "@firebase/firestore"
+
 
 export default function Products() {
+ 
+    const [products, setProduct]=React.useState([]);
+    const ProductCollectionRef=collection(db, "products");
+        useEffect(() => {
+            const getProducts= async () => {
+            const data=await getDocs(ProductCollectionRef);
+            setProduct(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
+         };
+         getProducts();
+        }, []);
 
-    const contacts=ContactsInfo.map(contact => {
-        return(
-            <Contact
-            key={contact.id}
-            {...contact}
-            />
-        )
-    })
-
-    return (<div>
+   
+//using firebase
+const productcomponent=products.map(product => {
+    return(
+        <Contact
+        key={product.id}
+        {...product}
+        />
+    )
+})
+    return (
+        <div>
         <div className="contacts">
-            {contacts}
+            {productcomponent}
         </div>
         <div className="divider70">
         </div>

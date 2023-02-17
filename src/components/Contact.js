@@ -20,15 +20,7 @@ export default function Contact(props) {
         }))
     }
 
-    let heartIcon
-    if (props.favourite === 3) {
-        heartIcon= <div><FaHeart className="heart"/><FaHeart className="heart"/><FaHeart/></div>
-    } else if (props.favourite === 4) {
-        heartIcon= <div><FaHeart className="heart"/><FaHeart className="heart"/><FaHeart className="heart"/><FaHeart/></div>
-    } else if (props.favourite === 5){
-        heartIcon= <div><FaHeart className="heart"/><FaHeart className="heart"/><FaHeart className="heart"/><FaHeart className="heart"/><FaHeart className="heart"/></div>
-    }
-
+   
     /*
         let displayText 
         if (props.openSpots ===0) {
@@ -44,12 +36,11 @@ export default function Contact(props) {
     return (
     <div className="contact-cards" onMouseOver={onImgOver} onMouseOut={onImgOut}>
         <div className="contact_info">
-            {props.stock ===0 && <div className="status">SOLD OUT</div>}
             <img className="image_card-inactive"src={img.image} />
         </div>
         <Link className="contact_name" to={`/products/${props.id}`}>{props.name}</Link>
-        <p className="contact_prise"> {props.price + ' $'}</p>
-        <p className="contact-hearticon">{heartIcon}</p>
+        <p className="contact_prise"> {props.price/100 + ' $'}</p>
+        {props.stock ===0 && <div className="status">SOLD OUT</div>}
     </div>
     )
 }

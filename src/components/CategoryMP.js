@@ -23,7 +23,7 @@ if(props.icon ==="FaMagic"){
     return (
         <Link className="categorymp" to={`${props.category}`}>
         <div>
-            <p className="categorymp_icon">{categoryIcon}</p>
+           <p className="categorymp_icon">{categoryIcon}</p>
            <p className="category_name">{props.category}</p>
            <p className="category_description">{props.description}</p> 
         </div>
