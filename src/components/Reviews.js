@@ -4,9 +4,9 @@ import { IoStarSharp } from "react-icons/io5";
 export default function Reviews(props) {
 
     let starIcon
-    if (props.stars ==="five"){
+    if (props.stars ===5){
         starIcon= <div className="review_stars"><IoStarSharp/> <IoStarSharp/> <IoStarSharp/> <IoStarSharp/> <IoStarSharp/> </div>
-    } else if( props.stars === "four") {
+    } else if( props.stars === 4) {
         starIcon= <div className="review_stars"><IoStarSharp/> <IoStarSharp/> <IoStarSharp/> <IoStarSharp/> </div>
     }
 

@@ -1,16 +1,31 @@
-
+import React from "react";
 import BeautyTips from "./components/BeautyTips";
 import BeautyTipsInfo from "./components/BeautyTipsInfo";
 import Reviews from "./components/Reviews";
-import ReviewInfo from "./components/ReviewInfo";
 import Bestseller from "./components/Bestseller";
 import CategoryMP from "./components/CategoryMP";
 import CategoryMpInfo from "./components/CategoryMpInfo";
 import MainPhoto from "./components/MainPhoto"
+import { db } from "./firebase-config";
+import {getDocs, collection} from "@firebase/firestore";
+import { useEffect } from "react";
+import { query, orderBy, limit } from "firebase/firestore";
 
 
 
 export default function Home() {
+    const[reviews, setReviews]=React.useState([]);
+    const reviewCollectionRef=collection(db, "reviews");
+
+    useEffect( () => {
+        const getReviews= async () => {
+            const q=query(reviewCollectionRef, orderBy("stars", "desc"), limit(4));
+            const data=await getDocs(q);  
+            setReviews(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
+        };
+        getReviews();
+    }, []);
+
 
 
 const beautytips=BeautyTipsInfo.map(beautytip => {
@@ -22,7 +37,7 @@ const beautytips=BeautyTipsInfo.map(beautytip => {
     )
 })
 
-const reviews=ReviewInfo.map(review => {
+const reviewscomponent=reviews.map(review => {
     return (
         <Reviews
         key={review.id}
@@ -56,7 +71,7 @@ return(
 <div className="clasifier_special">REVIEW</div>
 <div className="clasifier_big">Others say about us</div>
 <div className="customer_review">
-    {reviews}
+    {reviewscomponent}
 </div>
 </>
 )
