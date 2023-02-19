@@ -3,7 +3,6 @@ import BeautyTips from "./components/BeautyTips";
 import Reviews from "./components/Reviews";
 import Bestseller from "./components/Bestseller";
 import CategoryMP from "./components/CategoryMP";
-import CategoryMpInfo from "./components/CategoryMpInfo";
 import MainPhoto from "./components/MainPhoto"
 import { db } from "./firebase-config";
 import {getDocs, collection} from "@firebase/firestore";
@@ -15,9 +14,12 @@ import { query, orderBy, limit } from "firebase/firestore";
 export default function Home() {
     const[reviews, setReviews]=React.useState([]);
     const[beautytips, setbeautyTips]=React.useState([]);
+    const[categories, setCategories]=React.useState([]);
 
     const reviewCollectionRef=collection(db, "reviews");
     const beautytipsCollectionRef=collection(db, "beautytips");
+    const categoriesCollectionRef=collection(db, "categories");
+
 
     useEffect( () => {
         const getReviews= async () => {
@@ -32,8 +34,14 @@ export default function Home() {
             setbeautyTips(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
         };
 
+        const getCategories=async ()=> {
+            const data= await getDocs(categoriesCollectionRef);
+            setCategories(data.docs.map((doc)=> ({...doc.data(), id: doc.id})));
+        };
+
         getReviews();
         getBeautyTips();
+        getCategories();
     }, []);
 
 
@@ -56,7 +64,7 @@ const reviewscomponent=reviews.map(review => {
     )
 })
 
-const categories=CategoryMpInfo.map(category => {
+const categoriescomponent=categories.map(category => {
     return (
         <CategoryMP
         key={category.id}
@@ -74,7 +82,7 @@ return(
     {beautytipscomponent}
 </div>
 
-<div className="categories">{categories}</div>
+<div className="categories">{categoriescomponent}</div>
 
 <Bestseller/>
 
