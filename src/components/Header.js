@@ -16,7 +16,7 @@ export default function Header() {
   }
 
     return (
-      <div>
+      <div className="nav">
         <nav  className='nav sticky'>
           <a className="company_name">Beautify</a>
           <ul className='nav_items'>

@@ -30,6 +30,8 @@ export default function SingleContact() {
 
     const { id } = useParams();
     const SingleProduct = products.find((product) => String(product.id) === id) || {};
+    let stockquantity=SingleProduct.stock;
+
     
     const handleChange = (event, newValue) => {
         setTabValue(newValue);
@@ -57,7 +59,8 @@ export default function SingleContact() {
                             <li>{SingleProduct.desc3}</li>
                         </ul>
                     </div>
-                    <button className="singlecontact-button" onClick={() => addItem(SingleProduct)}>BUY NOW</button>
+                    { stockquantity==0 ? <button className="singlecontact-button sold">SOLD OUT</button>
+                   : <button className="singlecontact-button" onClick={() => addItem(SingleProduct)}>BUY NOW</button>}
                 </div>
             </div>
             <GoToTop/>

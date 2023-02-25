@@ -4,14 +4,16 @@ import { useCart } from "react-use-cart";
 import { TbTrash } from "react-icons/tb";
 import { AiOutlinePlus } from "react-icons/ai";
 import { AiOutlineMinus } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 export default function Cart({closeModal}){
-    const {
+    const{
         isEmpty,
         totalUniqueItems,
         items,
         updateItemQuantity,
         removeItem,
+        cartTotal
       } = useCart();
 
 
@@ -24,7 +26,7 @@ export default function Cart({closeModal}){
                 {isEmpty== false && <h3 className="cart-declare">Cart ({totalUniqueItems})</h3>}
 
                  {items.map((item) => (
-                    <div className="cart-item">
+                    <div className="cart-item" key={item.id}>
                     <img className="ci-img" src={item.imginactive} alt={item.name}/>
 
                     <div className="ci-description">
@@ -46,9 +48,10 @@ export default function Cart({closeModal}){
 
                     </div>
              ))}
-
             </div>
-      
+            <div className="ci-process">
+            {isEmpty==false && <Link to="/order" state={items} component={cartTotal}><button className="ci-process-button" onClick={closeModal}>PROCESS ORDER</button></Link>}
+            </div>
 
         </div>
 

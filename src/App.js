@@ -6,6 +6,7 @@ import Products from "./Products";
 import SingleContact from "./components/SingleContact";
 import ContactbyCategory from "./components/ContactbyCategory";
 import About from "./components/About";
+import Order from "./components/Order";
 
 
 import {
@@ -16,7 +17,6 @@ import {
     BrowserRouter
   } from "react-router-dom";
 import GoToTop from "./components/GoToTop";
-import { Container } from "@mui/system";
 
 export default function App() {
     
@@ -30,6 +30,7 @@ export default function App() {
           <Route path="/:category" element={<ContactbyCategory/>} />
           <Route path="/products/:id" element={<SingleContact/>} />
           <Route path="/" element={<Home/>} />
+          <Route path="/order"element={<Order/>} />
           </Routes>
           <GoToTop/>
    <Footer/>

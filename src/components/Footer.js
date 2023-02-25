@@ -29,7 +29,7 @@ export default function Footer() {
                     <p><FaCity className="react_icons_footer"/>Sarajevo</p>
                 </div>
             </div>
-            <div className="footer_end">© EMA Team, All Right Reserved. Designed By EMA Team. Distributed By EMA Team</div>
+            <div className="df-jc">© EMA Team, All Right Reserved. Designed By EMA Team. Distributed By EMA Team</div>
         </div>
 
     )
