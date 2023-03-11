@@ -25,7 +25,7 @@ export default function Bestseller() {
                         <p><FaArrowRight className="bestseller_table_icons"/>Extra Volume</p>
                     </div>
                 </div>  
-                <Link to="/products/1" className="link">
+                <Link to="/products/EjCbRf688GRqOTADVRF7" className="link">
                     <div className="bestseller_button">SHOP NOW</div>        
                 </Link>
              

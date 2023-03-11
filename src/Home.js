@@ -10,7 +10,6 @@ import { useEffect } from "react";
 import { query, orderBy, limit } from "firebase/firestore";
 
 
-
 export default function Home() {
     const[reviews, setReviews]=React.useState([]);
     const[beautytips, setbeautyTips]=React.useState([]);
@@ -20,7 +19,7 @@ export default function Home() {
     const beautytipsCollectionRef=collection(db, "beautytips");
     const categoriesCollectionRef=collection(db, "categories");
 
-
+  
     useEffect( () => {
         const getReviews= async () => {
             const q=query(reviewCollectionRef, orderBy("stars", "desc"), limit(4));
@@ -38,59 +37,61 @@ export default function Home() {
             const data= await getDocs(categoriesCollectionRef);
             setCategories(data.docs.map((doc)=> ({...doc.data(), id: doc.id})));
         };
+    
 
         getReviews();
         getBeautyTips();
         getCategories();
+
     }, []);
-
-
-
-const beautytipscomponent=beautytips.map(beautytip => {
-    return (
-    <BeautyTips 
-        key={beautytip.id}
-        {...beautytip}
-    />
-    )
-})
-
-const reviewscomponent=reviews.map(review => {
-    return (
-        <Reviews
-        key={review.id}
-        {...review}
+   
+  
+    
+    const beautytipscomponent=beautytips.map(beautytip => {
+        return (
+        <BeautyTips 
+            key={beautytip.id}
+            {...beautytip}
         />
+        )
+    })
+
+    const reviewscomponent=reviews.map(review => {
+        return (
+            <Reviews
+            key={review.id}
+            {...review}
+            />
+        )
+    })
+
+    const categoriescomponent=categories.map(category => {
+        return (
+            <CategoryMP
+            key={category.id}
+            {...category}
+            />
+        )
+    })
+
+    return(
+        <>
+
+    <MainPhoto/>
+    <div className="clasifier">BEAUTY TIPS</div>
+    <div className="beautytips">
+        {beautytipscomponent}
+    </div>
+
+    <div className="categories">{categoriescomponent}</div>
+
+    <Bestseller/>
+
+    <div className="clasifier_special">REVIEW</div>
+    <div className="clasifier_big">Others say about us</div>
+    <div className="customer_review">
+        {reviewscomponent}
+    </div>
+    </>
     )
-})
-
-const categoriescomponent=categories.map(category => {
-    return (
-        <CategoryMP
-        key={category.id}
-        {...category}
-        />
-    )
-})
-
-return(
-    <>
-
-<MainPhoto/>
-<div className="clasifier">BEAUTY TIPS</div>
-<div className="beautytips">
-    {beautytipscomponent}
-</div>
-
-<div className="categories">{categoriescomponent}</div>
-
-<Bestseller/>
-
-<div className="clasifier_special">REVIEW</div>
-<div className="clasifier_big">Others say about us</div>
-<div className="customer_review">
-    {reviewscomponent}
-</div>
-</>
-)
-}
+    }

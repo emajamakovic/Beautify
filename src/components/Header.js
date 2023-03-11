@@ -22,7 +22,6 @@ export default function Header() {
           <ul className='nav_items'>
             <li> <Link to="/" className="nav_item">HOME</Link> </li>
             <li> <Link to="/products" className="nav_item">PRODUCTS</Link></li>
-            <li> <Link to="/about" className="nav_item">ABOUT</Link></li>
             <li><button className="nav_item cart-icon" onClick={showModal}><BsHandbagFill/></button></li>
           </ul>
         </nav>

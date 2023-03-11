@@ -5,7 +5,6 @@ import Home from "./Home";
 import Products from "./Products";
 import SingleContact from "./components/SingleContact";
 import ContactbyCategory from "./components/ContactbyCategory";
-import About from "./components/About";
 import Order from "./components/Order";
 
 
@@ -25,7 +24,6 @@ export default function App() {
         <>
     <Header/>
     <Routes>
-          <Route path="/about" element={<About/>}/>
           <Route path="/products" element={<Products/>} />
           <Route path="/:category" element={<ContactbyCategory/>} />
           <Route path="/products/:id" element={<SingleContact/>} />

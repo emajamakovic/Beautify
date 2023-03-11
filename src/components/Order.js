@@ -27,6 +27,17 @@ export default function Order() {
     const[address, setAddress]=React.useState("");
     const[county, setCountry]=React.useState("");
     const OrderCollectionRef=collection(db, "orders");
+    const [checkedDelivery, setCheckedDelivery] = React.useState(false);
+    const [checkedPayment, setCheckedPayment] = React.useState(false);
+
+
+    const checkeDelivery = (event) => {
+        setCheckedDelivery(event.target.checked);
+    };
+
+    const checkePayment=(event) => {
+        setCheckedPayment(event.target.checked);
+    };
    
     const addOrder= async()=> {
         await addDoc(OrderCollectionRef, {customer_name:name, customer_surname:surname, email:email, telephone:telephone, city:city, zipcode:zipcode,
@@ -92,22 +103,24 @@ export default function Order() {
 
         <div className="delivery">
               <div className="h-delivery">
-                <Checkbox></Checkbox>
+                <Checkbox checked={checkedDelivery} onChange={checkeDelivery}/>
                 <p  className="df-jc" style={{fontSize:50}}><TfiPackage/></p>
                 <h4 className="df-jc">HOME DELIVERY</h4>
                 <h5 className="df-jc">7.99 $</h5>
               </div> 
 
               <div className="payment">
-              <Checkbox></Checkbox>
+              <Checkbox checked={checkedPayment} onChange={checkePayment}/>
                 <p  className="df-jc" style={{fontSize:50}}><BsCashStack/></p>
                 <h4 className="df-jc">HOME PAYMENT</h4>
               </div>
 
 
         </div>
-
-        <div className="df-jc"><button onClick={addOrder} className="ordernow-button">ORDER NOW</button></div>
+        {checkedDelivery==true && checkedPayment==true ? 
+        <div className="df-jc"><button onClick={addOrder} className="ordernow-button">ORDER NOW</button></div> :
+        <div className="df-jc"><button style={{backgroundColor:'lightgray'}} className="ordernow-button">ORDER NOW</button></div>
+        }
         </section>
     )
 }
