@@ -35,11 +35,11 @@ export default function Contact(props) {
 
     return (
     <div className="contact-cards" onMouseOver={onImgOver} onMouseOut={onImgOut}>
-        <div className="contact_info">
-            <img className="image_card-inactive"src={img.image} />
+        <div className="contact-info">
+            <img className="image-card-inactive"src={img.image} />
         </div>
-        <Link className="contact_name" to={`/products/${props.id}`}>{props.name}</Link>
-        <p className="contact_prise"> {props.price/100 + ' $'}</p>
+        <Link className="contact-name" to={`/products/${props.id}`}>{props.name}</Link>
+        <p className="contact-prise"> {props.price/100 + ' $'}</p>
         {props.stock ===0 && <div className="status">SOLD OUT</div>}
     </div>
     )

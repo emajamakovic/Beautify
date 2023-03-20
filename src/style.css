@@ -17,7 +17,7 @@ body {
       
 }
 
-.company_name{
+.company-name{
     color: white;
     margin-left: 100px;
     font-family: "Segoe Script", cursive;
@@ -29,7 +29,7 @@ body {
     height:70px ;
     z-index: 6;
 }
-.nav_items {
+.nav-items {
     list-style: none; 
     display :flex;
     padding-right: 42px;
@@ -38,13 +38,13 @@ body {
     align-items: center;
 }
 
-.nav_item{
+.nav-item{
     color: darkgray;
     text-decoration: none;
     
 
 }
-.nav_item:hover {
+.nav-item:hover {
     color:white
 }
 
@@ -57,12 +57,12 @@ body {
 }
 
 
-.nav_items > li {
+.nav-items > li {
     padding: 10px;
 }
 
 
-.contact_prise{
+.contact-prise{
     margin-top: 35px;
     display:flex;
     justify-content: center;
@@ -70,7 +70,7 @@ body {
 
 }
 
-.contact_name{
+.contact-name{
     display:flex;
     justify-content: center;
     text-align: center;
@@ -97,7 +97,7 @@ body {
     padding-right: 3px;
 }
 
-.image_card-inactive{
+.image-card-inactive{
     width: 260px;
     height: 270px;
     
@@ -119,7 +119,7 @@ body {
     display: grid;
 }
 
-.main_screen_photo{
+.main-screen-photo{
     width: 100%;
     height: 530px;
 }
@@ -133,7 +133,7 @@ body {
     margin-top: 5px;
 }
 
-.reserve_button{
+.reserve-button{
     margin: 12px auto;
     display: flex;
     width: 100px;
@@ -142,7 +142,7 @@ body {
 
 }
 
-.beauty_image{
+.beauty-image{
     width: 475px;
     height: 310px;
     border-radius:12px ;
@@ -167,7 +167,7 @@ body {
 
 }
 
-.beauty_title{
+.beauty-title{
     position: absolute;
     bottom: 8px;
     left: 16px;
@@ -181,7 +181,7 @@ body {
     margin-top: 25px;
 }
 
-.clasifier_special{
+.clasifier-special{
     font-family: "Proxima Nova",Arial,sans-serif;
     font-size: 15px;
     text-align: center;
@@ -190,7 +190,7 @@ body {
     font-weight: bold;
 }
 
-.clasifier_big{
+.clasifier-big{
     font-family: "Proxima Nova",Arial,sans-serif;
     font-size: 40px;
     text-align: center;
@@ -204,7 +204,7 @@ body {
     padding-right: 35px;
 }
 
-.footer_firstpart{
+.footer-firstpart{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -214,7 +214,7 @@ body {
     height: 320px;
 }
 
-.footer_info{
+.footer-info{
     width: 300px;
     height: 350px;
     text-align: justify;
@@ -222,23 +222,23 @@ body {
     
 }
 
-.footer_info_companyname{
+.footer-info-companyname{
     font-family: "Segoe Script", cursive;
     font-size: 25px;
     
 
 }
 
-.footer_maps{
+.footer-maps{
     height: 276px;
 }
 
-.footer_contact{
+.footer-contact{
     height: 320px;
     padding-left: 62px;
 }
 
-.footer_maps_frame{
+.footer-maps-frame{
     width: 550px;
     height: 225px;
 }
@@ -248,7 +248,7 @@ body {
     justify-content: center;
 }
 
-.react_icons_footer {
+.react-icons-footer {
     padding-right: 10px;
     font-size: 16px;
   }
@@ -260,18 +260,18 @@ body {
     margin:26px 15px;
   }
 
-  .customer_review{
+  .customer-review{
     display: flex;
     justify-content: center;
     margin-bottom: 22px;
   }
 
-  .review_name{
+  .review-name{
     display: flex;
     justify-content: center;
   }
 
-  .review_description{
+  .review-description{
     display: flex;
     justify-content: center;
     text-align: center;
@@ -282,14 +282,14 @@ body {
 
   }
 
-  .review_stars{
+  .review-stars{
     display: flex;
     justify-content: center;
     color: #FFD000;
     padding-bottom: 15px;
   }
 
-  .bestseller_photo{
+  .bestseller-photo{
     width:588px;
     height: 423px;
   }
@@ -304,34 +304,34 @@ body {
 
   }
 
-  .bestseller_specification{
+  .bestseller-specification{
     display: flex;
   }
 
-  .bestseller_specification_table{
+  .bestseller-specification-table{
     padding-right: 111px;
     padding-bottom: 25px;
   }
 
-  .bestseller_table_icons{
+  .bestseller-table-icons{
     color:#FF6ADC;
     font-size: 14px;
     padding-right: 5px;
   }
-  .bestseller_divider{
+  .bestseller-divider{
     padding-top: 20px;
     padding-left: 50px;
     width:600px;
 
   }
 
-  .bestseller_label{
+  .bestseller-label{
     color:#FF6ADC;
     font-size: 15px;
     font-weight: 600;
   }
   
-  .bestseller_button{
+  .bestseller-button{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -341,7 +341,7 @@ body {
     background-color: black;
     color: white;
   }
-  .bestseller_button:hover{
+  .bestseller-button:hover{
     background-color: #333333   ;
     color: white;
 
@@ -370,12 +370,12 @@ body {
     background-color: #D2F4FE;
 }
 
-.categorymp_icon{
+.categorymp-icon{
     display: flex;
     justify-content: center;
 }
 
-.category_name{
+.category-name{
     display: flex;
     justify-content: center;
     font-size: 20px;
@@ -384,12 +384,12 @@ body {
 
 }
 
-.category_description{
+.category-description{
     display: flex;
     justify-content: center;
 }
 
-.category_icon{
+.category-icon{
     width: 35px;
     height:35px;
     color:#FF6ADC

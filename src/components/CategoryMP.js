@@ -11,21 +11,21 @@ export default function CategoryMP(props) {
 let categoryIcon
 
 if(props.icon ==="FaMagic"){
-    categoryIcon=<div><FaMagic className="category_icon"/></div>
+    categoryIcon=<div><FaMagic className="category-icon"/></div>
 }else if (props.icon === "GiEyelashes") {
-    categoryIcon=<div><GiEyelashes className="category_icon"/></div>
+    categoryIcon=<div><GiEyelashes className="category-icon"/></div>
 }else if(props.icon=== "RiEyeCloseLine") {
-    categoryIcon=<div><RiEyeCloseLine className="category_icon"/></div>
+    categoryIcon=<div><RiEyeCloseLine className="category-icon"/></div>
 }else if (props.icon === "GiLipstick") {
-    categoryIcon =<div><GiLipstick className="category_icon"/></div>
+    categoryIcon =<div><GiLipstick className="category-icon"/></div>
 }
 
     return (
         <Link className="categorymp" to={`${props.category}`}>
         <div>
-           <p className="categorymp_icon">{categoryIcon}</p>
-           <p className="category_name">{props.category}</p>
-           <p className="category_description">{props.description}</p> 
+           <p className="categorymp-icon">{categoryIcon}</p>
+           <p className="category-name">{props.category}</p>
+           <p className="category-description">{props.description}</p> 
         </div>
         </Link>
     )

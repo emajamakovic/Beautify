@@ -18,11 +18,11 @@ export default function Header() {
     return (
       <div className="nav">
         <nav  className='nav sticky'>
-          <a className="company_name">Beautify</a>
-          <ul className='nav_items'>
-            <li> <Link to="/" className="nav_item">HOME</Link> </li>
-            <li> <Link to="/products" className="nav_item">PRODUCTS</Link></li>
-            <li><button className="nav_item cart-icon" onClick={showModal}><BsHandbagFill/></button></li>
+          <a className="company-name">Beautify</a>
+          <ul className='nav-items'>
+            <li> <Link to="/" className="nav-item">HOME</Link> </li>
+            <li> <Link to="/products" className="nav-item">PRODUCTS</Link></li>
+            <li><button className="nav-item cart-icon" onClick={showModal}><BsHandbagFill/></button></li>
           </ul>
         </nav>
         {show && <Cart closeModal={closeModal}/>}

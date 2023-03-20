@@ -87,9 +87,9 @@ export default function Home() {
 
     <Bestseller/>
 
-    <div className="clasifier_special">REVIEW</div>
-    <div className="clasifier_big">Others say about us</div>
-    <div className="customer_review">
+    <div className="clasifier-special">REVIEW</div>
+    <div className="clasifier-big">Others say about us</div>
+    <div className="customer-review">
         {reviewscomponent}
     </div>
     </>

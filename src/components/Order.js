@@ -16,8 +16,8 @@ export default function Order() {
         cartTotal
       } = useCart();
 
-    const ordered_items=items.map((item) => ({name:item.name, id:item.id, quantity:item.quantity}));
-    const order_amount=cartTotal/100;
+    const orderedItems=items.map((item) => ({name:item.name, id:item.id, quantity:item.quantity}));
+    const orderAmount=cartTotal/100;
     const[name, setName]=React.useState("");
     const[surname, setSurname]=React.useState("");
     const[email, setEmail]=React.useState("");
@@ -41,7 +41,7 @@ export default function Order() {
    
     const addOrder= async()=> {
         await addDoc(OrderCollectionRef, {customer_name:name, customer_surname:surname, email:email, telephone:telephone, city:city, zipcode:zipcode,
-            address:address, country:county, ordered_items:ordered_items, order_amount:order_amount})}
+            address:address, country:county, orderedItems:orderedItems, orderAmount:orderAmount})}
 
     return (
         <section className="container">
@@ -98,7 +98,7 @@ export default function Order() {
         </div>
         </div>
         <div className="total-amount">
-            <a>TOTAL: {order_amount}$</a>
+            <a>TOTAL: {orderAmount}$</a>
         </div>
 
         <div className="delivery">
