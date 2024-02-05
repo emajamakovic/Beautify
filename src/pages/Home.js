@@ -1,13 +1,14 @@
 import React from "react";
-import BeautyTips from "./components/BeautyTips";
-import Reviews from "./components/Reviews";
-import Bestseller from "./components/Bestseller";
-import CategoryMP from "./components/CategoryMP";
-import MainPhoto from "./components/MainPhoto"
-import { db } from "./firebase-config";
+import BeautyTips from "../components/BeautyTips";
+import Reviews from "../components/Reviews";
+import Bestseller from "../components/Bestseller";
+import CategoryMP from "../components/CategoryMP";
+import MainPhoto from "../components/MainPhoto"
+import { db } from "../firebase-config";
 import {getDocs, collection} from "@firebase/firestore";
 import { useEffect } from "react";
 import { query, orderBy, limit } from "firebase/firestore";
+import "../styles/Home.css";
 
 
 export default function Home() {

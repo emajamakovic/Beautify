@@ -1,0 +1,44 @@
+
+.company-name{
+    color: white;
+    margin-left: 100px;
+    font-family: "Segoe Script", cursive;
+    font-size: large;
+
+
+}
+.nav{
+    height:70px ;
+    z-index: 6;
+}
+.nav-items {
+    list-style: none; 
+    display :flex;
+    padding-right: 42px;
+    font-size: 13px;
+    color: darkgray;
+    align-items: center;
+}
+
+.nav-item{
+    color: darkgray;
+    text-decoration: none;
+    
+
+}
+.nav-item:hover {
+    color:white
+}
+
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: 	black;
+}
+
+
+.nav-items > li {
+    padding: 10px;
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/BeautyTips.css";
 
 export default function BeautyTips(props) {
     return (

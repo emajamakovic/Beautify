@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import {useParams} from 'react-router-dom'
-import Contact from "./Contact";
-import GoToTop from "./GoToTop";
+import Contact from "../components/Product";
+import GoToTop from "../components/GoToTop";
 import { db } from "../firebase-config";
 import {collection, getDocs} from "@firebase/firestore"
 

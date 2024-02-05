@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
-import Contact from "./components/Contact";
-import { db } from "./firebase-config";
+import Product from "../components/Product";
+import { db } from "../firebase-config";
 import { collection, getDocs} from "@firebase/firestore"
+import "../styles/Products.css";
 
 
 export default function Products() {
@@ -20,7 +21,7 @@ export default function Products() {
 //using firebase
 const productcomponent=products.map(product => {
     return(
-        <Contact
+        <Product
         key={product.id}
         {...product}
         />
@@ -28,7 +29,7 @@ const productcomponent=products.map(product => {
 })
     return (
         <div>
-        <div className="contacts">
+        <div className="products">
             {productcomponent}
         </div>
         <div className="divider70">

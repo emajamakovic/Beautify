@@ -4,6 +4,7 @@ import {BrowserRouter,
 } from "react-router-dom";
 import Cart from "./Cart";
 import { BsHandbagFill } from "react-icons/bs";
+import "../styles/Navbar.css";
 
 export default function Header() {
   const [show, setShow]=React.useState(false);

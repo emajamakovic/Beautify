@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {Link, useParams} from 'react-router-dom'
 import {  FaArrowLeft } from "react-icons/fa";
-import GoToTop from "./GoToTop";
+import GoToTop from "../components/GoToTop";
 import Tab  from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
@@ -9,10 +9,11 @@ import TabPanel from '@mui/lab/TabPanel';
 import { db } from '../firebase-config';
 import {collection, getDocs} from "@firebase/firestore"
 import { useCart } from "react-use-cart";
+import "../styles/SingleProduct.css";
 
 
 
-export default function SingleContact() {
+export default function SingleProduct() {
     const [tabvalue, setTabValue]=React.useState('0');
     const [products, setProduct]=React.useState([]);
     const { addItem } = useCart();
@@ -41,17 +42,17 @@ export default function SingleContact() {
 
 
     return (
-        <div className="singlecontact">
+        <div className="singleproduct">
             <div className="singleproduct-backbutton">
             <Link className="sp-backbutton" to="/products"><FaArrowLeft style={{fontSize:14, paddingRight:7}}/>Back to products</Link>
             </div>
-            <div className="singlecontact-intro">
+            <div className="singleproduct-intro">
                 <div>
-                    <img className="singlecontact-image" src={SingleProduct.imginactive}/>
+                    <img className="singleproduct-image" src={SingleProduct.imginactive}/>
                 </div>
-                <div className="singlecontact-info">
-                    <h2 className="singlecontact-name">{SingleProduct.name}</h2>
-                    <p className="singlecontact-description">{SingleProduct.description}</p>
+                <div className="singleproduct-info">
+                    <h2 className="singleproduct-name">{SingleProduct.name}</h2>
+                    <p className="singleproduct-description">{SingleProduct.description}</p>
                     <div className="sc-description-list">
                         <ul className="sc-description-listitems">
                             <li>{SingleProduct.desc1}</li>
@@ -59,13 +60,13 @@ export default function SingleContact() {
                             <li>{SingleProduct.desc3}</li>
                         </ul>
                     </div>
-                    { stockquantity==0 ? <button className="singlecontact-button sold">SOLD OUT</button>
-                   : <button className="singlecontact-button" onClick={() => addItem(SingleProduct)}>BUY NOW</button>}
+                    { stockquantity==0 ? <button className="singleproduct-button sold">SOLD OUT</button>
+                   : <button className="singleproduct-button" onClick={() => addItem(SingleProduct)}>BUY NOW</button>}
                 </div>
             </div>
             <GoToTop/>
 
-            <div className="singlecontact-tabs">
+            <div className="singleproduct-tabs">
                  <TabContext value={tabvalue}>
 
                     <div className="tabs">

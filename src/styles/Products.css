@@ -1,0 +1,13 @@
+.products{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    padding-top: 55px;
+    margin-left: 30px;
+    margin-right: 30px;
+    
+}
+
+
+.divider70{
+    margin-top: 70px;
+}

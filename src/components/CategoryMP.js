@@ -4,6 +4,7 @@ import { RiEyeCloseLine } from "react-icons/ri";
 import { GiEyelashes } from "react-icons/gi";
 import { GiLipstick } from "react-icons/gi";
 import {Link} from 'react-router-dom'
+import "../styles/CategoryMP.css";
 
 
 export default function CategoryMP(props) {

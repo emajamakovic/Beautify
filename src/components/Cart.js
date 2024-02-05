@@ -5,6 +5,7 @@ import { TbTrash } from "react-icons/tb";
 import { AiOutlinePlus } from "react-icons/ai";
 import { AiOutlineMinus } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import "../styles/Cart.css";
 
 export default function Cart({closeModal}){
     const{

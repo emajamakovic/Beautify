@@ -1,0 +1,44 @@
+.clasifier{
+    font-family: "Proxima Nova",Arial,sans-serif;
+    font-size: 27px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.beautytips{
+    display:flex;
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+
+.categories{
+    display: flex;    
+    margin-top: 90px;
+    margin-left: 150px;
+    margin-right: 150px;
+
+  }
+
+  .clasifier-special{
+    font-family: "Proxima Nova",Arial,sans-serif;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 70px;
+    color:#FF6ADC;
+    font-weight: bold;
+}
+
+
+.clasifier-big{
+    font-family: "Proxima Nova",Arial,sans-serif;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 25px; 
+}
+
+.customer-review{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 22px;
+  }

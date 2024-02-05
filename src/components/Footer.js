@@ -5,6 +5,7 @@ import { FaMailBulk } from "react-icons/fa";
 import { FaMap } from "react-icons/fa";
 import { FaCity } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
+import "../styles/Footer.css";
 
 
 export default function Footer() {

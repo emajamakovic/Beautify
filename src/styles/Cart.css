@@ -1,0 +1,95 @@
+
+.modal{
+    background-color: white;
+    width: 400px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    position: fixed;
+    z-index: 10;
+
+}
+
+.m-close-button{
+    right: 8px;
+    padding-top: 20px;
+    position: fixed;
+    color: black;
+    background-color: white;
+    font-size: 20px;
+    border: 0;
+}
+
+.cart-icon{
+    background-color: black;
+    font-size: 17px;
+}
+
+.cart-empty{
+    display: flex;
+    justify-content:center ;
+    padding-top: 350px;
+}
+
+.cart-item{
+    padding-bottom: 40px;
+    display: flex;
+    
+}
+.ci-container{
+    padding-left: 14px;
+    padding-top: 50px;
+    height: 580px;
+    overflow-y: scroll;
+}
+
+
+.ci-img{
+    width: 150px;
+    height: 139px;
+}
+
+.ci-description{
+    padding-left: 18px;
+}
+
+.cart-declare{
+    padding-left: 15px;
+}
+
+.ci-options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ci-quantity-button{
+    border: 0;
+    background-color: white;
+    font-size: 15px;
+   
+}
+
+.ci-quantity{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.ci-process{
+    bottom: 2rem;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.ci-process-button{
+    background-color: #D2F4FE;
+    border: 0;
+    width: 300px;
+    height: 42px;
+}
+
+.ci-process-button:hover{
+    background-color: aquamarine;
+}

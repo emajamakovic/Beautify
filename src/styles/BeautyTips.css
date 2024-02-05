@@ -1,0 +1,26 @@
+
+.beauty-image{
+    width: 475px;
+    height: 310px;
+    border-radius:12px ;
+
+}
+
+.beautytip{
+     margin-top:15px;
+     margin-left: 15px;
+     margin-right: 15px;
+    position: relative;
+}
+
+.beautytip:hover{
+    margin-top:5px;
+
+}
+
+.beauty-title{
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    color: white;
+}

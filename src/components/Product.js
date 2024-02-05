@@ -1,8 +1,8 @@
 import React from "react";
-import {  FaHeart } from "react-icons/fa";
 import {Link} from 'react-router-dom'
+import "../styles/Product.css";
 
-export default function Contact(props) {
+export default function Product(props) {
 
     let image=props.imginactive
     const [img, setImg] = React.useState({image});
@@ -34,12 +34,12 @@ export default function Contact(props) {
             */
 
     return (
-    <div className="contact-cards" onMouseOver={onImgOver} onMouseOut={onImgOut}>
-        <div className="contact-info">
+    <div className="product-cards" onMouseOver={onImgOver} onMouseOut={onImgOut}>
+        <div className="product-info">
             <img className="image-card-inactive"src={img.image} />
         </div>
-        <Link className="contact-name" to={`/products/${props.id}`}>{props.name}</Link>
-        <p className="contact-prise"> {props.price/100 + ' $'}</p>
+        <Link className="product-name" to={`/products/${props.id}`}>{props.name}</Link>
+        <p className="product-price"> {props.price/100 + ' $'}</p>
         {props.stock ===0 && <div className="status">SOLD OUT</div>}
     </div>
     )

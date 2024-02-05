@@ -1,0 +1,57 @@
+
+
+.footer{
+    background-color: black;
+    color: white;
+    height: 420px;
+    padding-right: 35px;
+}
+
+.footer-firstpart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Proxima Nova",Arial,sans-serif;
+    font-size: 17px;
+    padding-top: 40px;
+    height: 320px;
+}
+
+.footer-info{
+    width: 300px;
+    height: 350px;
+    text-align: justify;
+    padding-right: 62px;
+    
+}
+
+.footer-info-companyname{
+    font-family: "Segoe Script", cursive;
+    font-size: 25px;
+    
+
+}
+
+.footer-maps{
+    height: 276px;
+}
+
+.footer-contact{
+    height: 320px;
+    padding-left: 62px;
+}
+
+.footer-maps-frame{
+    width: 550px;
+    height: 225px;
+}
+
+.df-jc{
+    display: flex;
+    justify-content: center;
+}
+
+.react-icons-footer {
+    padding-right: 10px;
+    font-size: 16px;
+  }

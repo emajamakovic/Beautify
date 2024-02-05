@@ -1,6 +1,7 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import "../styles/BestSeller.css";
 
 export default function Bestseller() {
     return (

@@ -6,6 +6,7 @@ import { Checkbox } from "@mui/material";
 import { BsCashStack } from "react-icons/bs";
 import { db } from "../firebase-config";
 import {collection, addDoc} from "@firebase/firestore"
+import "../styles/Order.css";
 
 export default function Order() {
 

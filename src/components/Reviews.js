@@ -1,5 +1,6 @@
 import React from "react";
 import { IoStarSharp } from "react-icons/io5";
+import "../styles/Review.css";
 
 export default function Reviews(props) {
 
